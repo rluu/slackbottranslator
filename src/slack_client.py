@@ -32,6 +32,6 @@ if __name__ == "__main__":
                 print("")
                 print("")
 
-            time.sleep(1)
+            time.sleep(0.2)
     else:
         print "Connection Failed, invalid token?"
