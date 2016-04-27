@@ -18,15 +18,15 @@ if __name__ == "__main__":
             for message in json_messages:
                 print("DEBUG: json message is: " + str(message))
                 print("DEBUG: type is: " + message['type'])
-                if (message['type'] == "message" and message['channel'] == 'C0NP34ZCG' and "highcastle" not in json.dumps(message)):
+                if (message['type'] == "message" and message['channel'] == 'C0NP34ZCG' and "group3botRyan" not in json.dumps(message)):
                     print("DEBUG: Actual message is: " + message['text'])
                     frenchTranslation = translatorToFrench.translate(message['text'])
                     print("DEBUG: Translated message to french is: " + frenchTranslation)
                     
                     englishTranslation = translatorToEnglish.translate(frenchTranslation)
                     print("DEBUG: Translated message to english is: " + englishTranslation)
-                    sc.api_call("chat.postMessage", channel="#group3", text=frenchTranslation, username="highcastle", icon_emoji=':robot_face:')                    
-                    sc.api_call("chat.postMessage", channel="#group3", text=englishTranslation, username="highcastle", icon_emoji=':robot_face:')
+                    #sc.api_call("chat.postMessage", channel="#group3", text=frenchTranslation, username="group3botRyan", icon_emoji=':robot_face:')
+                    sc.api_call("chat.postMessage", channel="#group3", text=englishTranslation, username="group3botRyan", icon_emoji=':robot_face:')
 
                 print("")
                 print("")
